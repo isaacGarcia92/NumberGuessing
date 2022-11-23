@@ -7,6 +7,7 @@ class Program
         // Introduction Text
         Console.WriteLine("Let's play the guessing number game!");
         Console.WriteLine("You have 5 chances to win!");
+        Console.WriteLine("Are you ready?");
         Console.WriteLine("Enter a number between 1 and 20:");
 
         // Random Number Generator

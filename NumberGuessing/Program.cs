@@ -40,7 +40,6 @@ class Program
                 {
                     Console.WriteLine("You are close!");
                 }
-
                 else
                 {
                     Console.WriteLine("The number is too low!");
@@ -49,9 +48,15 @@ class Program
 
             if (randomNumber < userNumber)
             {
-                Console.WriteLine("The number is too high!");
+                if((userNumber - randomNumber) <= 5)
+                {
+                    Console.WriteLine("You are close!");
+                }
+                else
+                {
+                    Console.WriteLine("The number is too high!");
+                }
             }
-
             userChances--;
             Console.WriteLine($"You have {userChances} chance(s) left!");
 

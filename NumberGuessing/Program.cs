@@ -28,6 +28,8 @@ class Program
             if (randomNumber == userNumber)
             {
                 Console.WriteLine("Congratulations! You have guessed the correct number!");
+                Console.WriteLine("The game is over, thanks for playing!");
+                return;
             }
 
             if (randomNumber > userNumber)
@@ -43,17 +45,15 @@ class Program
                 {
                     Console.WriteLine("The number is too low!");
                 }
-
-                userChances--;
-                Console.WriteLine($"You have {userChances} chance(s) left!");
             }
 
             if (randomNumber < userNumber)
             {
                 Console.WriteLine("The number is too high!");
-                userChances--;
-                Console.WriteLine($"You have {userChances} chance(s) left!");
             }
+
+            userChances--;
+            Console.WriteLine($"You have {userChances} chance(s) left!");
 
             if (userChances == 0) break;
         }

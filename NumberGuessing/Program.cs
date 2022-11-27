@@ -2,20 +2,21 @@
 
 class Program
 {
+    const int NUM_OF_CHANCES = 5;
     static void Main(string[] args)
     {
-        // User Chances Tracker
-        int userChances = 5;
-
         // Introduction Text
         Console.WriteLine("Let's play the guessing number game!");
-        Console.WriteLine($"You have {userChances} chances to win!");
+        Console.WriteLine($"You have {NUM_OF_CHANCES} chances to win!");
         Console.WriteLine("Are you ready?");
         Console.WriteLine("Enter a number between 1 and 20:");
 
         // Random Number Generator
         Random rand = new Random();
         int randomNumber = rand.Next(1, 21);
+
+        // User Chances Tracker
+        int userChances = 5;
 
         // userNumber Variable Declaration
         int userNumber;

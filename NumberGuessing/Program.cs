@@ -4,9 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
+        // User Chances Tracker
+        int userChances = 5;
+
         // Introduction Text
         Console.WriteLine("Let's play the guessing number game!");
-        Console.WriteLine("You have 5 chances to win!");
+        Console.WriteLine($"You have {userChances} chances to win!");
         Console.WriteLine("Are you ready?");
         Console.WriteLine("Enter a number between 1 and 20:");
 
@@ -16,9 +19,6 @@ class Program
 
         // userNumber Variable Declaration
         int userNumber;
-
-        // User Chances Tracker
-        int userChances = 5;
 
         // Input Evaluation
         do
@@ -60,7 +60,7 @@ class Program
             userChances--;
             Console.WriteLine($"You have {userChances} chance(s) left!");
 
-            if (userChances == 0) break;
+            if (userChances <= 0) break;
         }
 
         while (randomNumber != userNumber);

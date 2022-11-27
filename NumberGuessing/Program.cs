@@ -16,7 +16,7 @@ class Program
         int randomNumber = rand.Next(1, 21);
 
         // User Chances Tracker
-        int userChances = 5;
+        int userChances = NUM_OF_CHANCES;
 
         // userNumber Variable Declaration
         int userNumber;

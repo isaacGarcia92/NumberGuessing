@@ -33,31 +33,16 @@ class Program
                 return;
             }
 
-            if (randomNumber > userNumber)
+            // Check if guessing difference is 5 or less
+            if (Math.Abs(randomNumber - userNumber) <= 5)
             {
-                // Check if guessing difference is 5 or less
-
-                if ((randomNumber - userNumber) <= 5)
-                {
-                    Console.WriteLine("You are close!");
-                }
-                else
-                {
-                    Console.WriteLine("The number is too low!");
-                }
+                Console.WriteLine("You are close!");
             }
-
-            if (randomNumber < userNumber)
+            else
             {
-                if((userNumber - randomNumber) <= 5)
-                {
-                    Console.WriteLine("You are close!");
-                }
-                else
-                {
-                    Console.WriteLine("The number is too high!");
-                }
+                Console.WriteLine("The number is too low/ high!");
             }
+            
             userChances--;
             Console.WriteLine($"You have {userChances} chance(s) left!");
 

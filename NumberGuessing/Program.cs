@@ -21,9 +21,9 @@ class Program
         // userNumber Variable Declaration
         int userNumber;
 
-        // Input Evaluation
         do
         {
+            // Input Evaluation
             userNumber = Convert.ToInt32(Console.ReadLine());
 
             if (randomNumber == userNumber)
@@ -42,15 +42,15 @@ class Program
             {
                 Console.WriteLine("The number is too low/ high!");
             }
-            
+
             userChances--;
             Console.WriteLine($"You have {userChances} chance(s) left!");
 
             if (userChances <= 0) break;
         }
 
-        while (randomNumber != userNumber);
-
+        while (true);
+        
         Console.WriteLine("The game is over, thanks for playing!");
     }
 }
